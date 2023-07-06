@@ -1,0 +1,34 @@
+.RegularLoginForm{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    margin: auto;
+}
+.RegularLoginForm >*{
+    margin-top: 15px;
+    border: none;
+    outline: none;
+}
+.RegularLoginForm > input{
+    font-size: 18px;
+    padding: 6px 8px;
+    border-radius: 7px;
+    line-height: 28px;
+    color: #606e7b;;
+}
+.RegularLoginForm > label{
+    font-size: 14px;
+    justify-self: left;
+    margin-right: 100%;
+}
+.RegularLoginForm > button{
+    margin-top: 45px;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 14px;
+    min-height: 60px;
+    font-weight: 600;
+    background-color: #7497B3;
+    cursor: pointer;
+}

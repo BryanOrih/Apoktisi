@@ -1,0 +1,90 @@
+#SignUpPage{
+    background-repeat: no-repeat;
+    max-width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    background-image: url('../../Images/RegistrationBg.png');
+    display: grid;
+    grid-template-rows: 8em 1fr;
+    justify-content: center;
+}
+.SignUpDiv{
+    background-color: #D9D9D9;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    border-radius: 30px;
+    width: 1160px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.SignUpDiv > div:nth-child(1){
+    display: grid;
+    justify-content: center;
+}
+/*SECTION - Image styling */
+#SignUpPage > img{
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*SECTION - "Sign Up" & "Included with your free account:" styling */
+.SignUpDiv > div > h1{
+    width: 100%;
+    font-weight: 700;
+    font-size: 36px;
+    display: flex;
+    text-align: end;
+    margin: 45px auto 45px auto;
+    margin-right: 100%;
+}
+.SignUpDiv > div:nth-child(2){
+    margin-left: 0;
+    background-color: #CCCCCC;
+}
+.SignUpDiv > div:nth-child(2) > h1{
+    margin-top: 78px;
+    margin-bottom: 50px;
+    font-size: 26px;
+}
+
+/*SECTION - Key points under "Included with your free account:"  */
+.SignUpDiv > div > span > div{
+    background-color: #ECE8E8;
+    border-radius: 50%;
+    width: 1.9em;
+    height: 1.9em;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.SignUpDiv > div > span{
+    display: flex;
+    font-size: 26px;
+    text-align: start;
+    margin-bottom: 44px;
+    color: #0F608F;
+    line-height: 1.5;
+}
+.fa-clock{
+    color: #0F608F;
+}
+.SignUpDiv > div > p{
+    text-align: start;
+}
+.SignUpDiv > div > p > a{
+    color: #1e8bc2;
+    text-decoration: underline;
+}
+.SignUpDiv > div:nth-child(2) > *{
+    margin-left: 56px;
+}
+.SignUpDiv > div > a{
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #1e8bc2;
+}
+

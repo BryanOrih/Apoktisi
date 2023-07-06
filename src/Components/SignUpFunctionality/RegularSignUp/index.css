@@ -1,0 +1,46 @@
+.RegularSignUpForm{
+    display: flex;
+    flex-direction: column;
+    width: 348px;
+}
+.RegularSignUpForm > *{
+    outline: none;
+    border: none;
+}
+.RegularSignUpForm > label{
+    text-align: start;
+    margin-bottom: 14px;
+}
+.RegularSignUpForm > input{
+    font-size: 18px;
+    padding: 6px 8px;
+    border-radius: 7px;
+    line-height: 28px;
+    color: #606e7b;
+    margin-bottom: 20px; 
+}
+.RegularSignUpForm > button{
+    margin-top: 35px;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 14px;
+    min-height: 60px;
+    font-weight: 600;
+    background-color: #7497B3;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+/*SECTION - Removes the increase button from the input[type=Number]  */
+
+/* Chrome, Safari, Edge, Opera */
+.RegularSignUpForm > input::-webkit-outer-spin-button,
+.RegularSignUpForm > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.RegularSignUpForm > input[type=number] {
+  -moz-appearance: textfield;
+}

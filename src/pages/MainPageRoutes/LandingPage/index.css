@@ -1,0 +1,35 @@
+.LandingPage{
+    display: grid;
+    grid-template-rows: 5em 8em 1fr 8em 8em;
+}
+.LandingPage > a> button{
+    cursor: pointer;
+    background-color: #D0EEFF;
+    width: 10em;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    height: 2.5em;
+    font-size: 18px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: none;
+}
+.LandingPage > h1:nth-child(1){
+    font-weight: 600;
+    font-size: 3.125rem;
+    margin-top: 20px;
+    margin-bottom: 28px;
+}
+.LandingPage > p:nth-child(-n + 5){
+    margin-left: 22vw;
+    margin-right: 22vw;
+    font-size: 1.275rem;
+    color: #6d7586;
+    font-weight: 300;
+}
+.LandingPage > p:nth-child(5){
+    color: #6d7586;
+    font-size: .925rem;
+    margin-top: 3em;
+}

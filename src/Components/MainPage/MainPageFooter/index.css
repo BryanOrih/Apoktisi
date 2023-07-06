@@ -1,0 +1,20 @@
+.MainPageFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7em;
+    background-color: white;
+}
+.MainPageFooter > p{
+    font-size: 14px;
+    margin-left: 5em;
+}
+.MediaContainer{
+    display: flex;
+    gap: 25px;
+    margin-right: 50px;
+}
+.MediaContainer > i{
+    font-size: 35px;
+    cursor: pointer;
+}

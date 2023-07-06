@@ -1,0 +1,37 @@
+.SampleSearchContainer{
+    background-image: url('../../../Images/SampleSearchBg.png');
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    padding-bottom: 4em;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.SampleSearchContainer > h3{
+    font-weight: 600;
+    font-size: 24px;
+}
+.SampleSearchContainer > form > label {
+    display: block;
+    font-size: 14px;
+    margin-right: 11.2em;
+}
+.SampleSearchContainer > form > button {
+    cursor: pointer;
+    margin-left: 1.5em;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 0.5em 1.2em;
+    border-radius: 6px;
+}
+.SampleSearchContainer > form > input {
+    padding: 0;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    height: 2.1em;
+    padding-left: 12px;
+}

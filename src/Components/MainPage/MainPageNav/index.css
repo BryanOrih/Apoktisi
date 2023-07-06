@@ -1,0 +1,47 @@
+#MainPageNav > *{
+    font-weight: 600;
+}
+.NavLogo > img, .NavBarMenu > a, .NavBarMenu > span, .NavBarRegistration> div{
+    cursor: pointer;
+}
+.NavBarMenu > * , .NavBarRegistration > *{
+    font-size: 18px;
+}
+#MainPageNav{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1.5fr;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.NavLogo > img{
+    width: 9em;
+    margin-left: 8em;
+}
+.NavBarMenu{
+    display: flex;
+    justify-content: center;
+    column-gap: 65px;
+}
+.NavBarRegistration{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: end;
+    margin-right: 50px;
+}
+.NavBarLogin{
+    text-decoration-line: none;
+    color: black;
+}
+.NavBarSignUp{
+    background-color: #D0EEFF;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    text-decoration-line: none;
+    color: black;
+}
+.NavBarSignUp > p{
+    margin: 12px;
+}
