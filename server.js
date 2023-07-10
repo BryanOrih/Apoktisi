@@ -11,11 +11,13 @@ app.use(express.json())
 app.use(express.static(path.join(__dirname, '/build')))
 //SECTION - Connects to database
 require('./config/database')
-const {getActiveUsers, createUser} = require('./controllers/activeUser.js')
+const {getActiveUsers, createUser, confirmToken} = require('./controllers/activeUser.js')
 
 app.get('/getusers', getActiveUsers)
 
-app.post('/createuser', createUser)
+app.post('/users/createuser', createUser)
+
+app.get('/confirmation/:token', confirmToken)
 
 app.listen(port, ()=>{
     console.log("hey this server working, yayyyy")

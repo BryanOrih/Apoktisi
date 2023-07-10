@@ -9,13 +9,14 @@ const RegularSignUp = () => {
     lastName: '',
     mobilePhone: ''
   })
+  //FIXME - Make sure to add if the inputed content is correct (ex: if it's in email format, proper password, etc) 
   const handleSubmit = (e) =>{
     e.preventDefault()
     const isEmpty = Object.values(input).some(x => x === null || x === '');
     if(isEmpty) return
     axios({
       method: "POST",
-      url: "/createuser",
+      url: "/users/createuser",
       data:{
         email: `${input.email}`,
         password: `${input.password}`,

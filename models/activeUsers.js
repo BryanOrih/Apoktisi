@@ -5,7 +5,8 @@ const activeUserSchema = new mongoose.Schema({
         password: {type: String, required: true},
         firstName: {type: String, required: true},
         lastName: {type: String, required: true},
-        mobilePhone: {type: Number, required: true}
+        mobilePhone: {type: Number, required: true},
+        confirm: {type: Boolean, default: false}
     },
     {timestamps: true}
 )
