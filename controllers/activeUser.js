@@ -5,15 +5,12 @@ const nodemailer = require('nodemailer')
 const jwt = require('jsonwebtoken')
 const Mailgen = require('mailgen')
 
+//NOTE - Bottom code is for log in
+// let userFromDB = await activeUser.findOne({email: userInputs.email})
+
 const createUser = async (req,res)=>{
     try{
-        // host: 'smtp.gmail.com',
-        // port: 587,
-        // secure: false,
-        // logger: true,
-        // debug: true,
-        // secureConnection: false, 
-        console.log("hitting route")
+        //SECTION - Email sender connection
         const transporter = nodemailer.createTransport({
             service:"gmail",
             auth: {
@@ -21,6 +18,7 @@ const createUser = async (req,res)=>{
                 pass: process.env.GMAIL_PASS
             }
         });
+        //NOTE - Use Mailgen for mail design
         // let Mailgenator = new Mailgen({
         //     theme: "default",
         //     product:{
@@ -28,25 +26,9 @@ const createUser = async (req,res)=>{
         //         link: 'https://mailgen.js/'
         //     }
         // })
-        // console.log(transporter)\
-
-        // const info = await transporter.sendMail({
-        //     from: {
-        //         name: "Bryan",
-        //         address: process.env.GMAIL_USER
-        //     },
-        //     to: ["bryanorihuela2459@gmail.com"],
-        //     subject: 'Confirm Email',
-        //     text: "hello world",
-        //     html: `<h1>Please click this email to confirm your email:</h1>`,
-        // })
-
         const userInputs = await req.body
-        // console.log(userInputs.email)
-        //NOTE - Bottom code is for log in
-        // let userFromDB = await activeUser.findOne({email: userInputs.email})
-        delete userInputs.password
-        const token = await jwt.sign(
+        //SECTION - Generate token
+        jwt.sign(
             {
                 userInputs,
             },
@@ -55,17 +37,14 @@ const createUser = async (req,res)=>{
                 expiresIn: '1d',
             },
             (err, emailToken) => {
+                //SECTION - URL path with JWT passed as params
                 const url = `http://localhost:3001/confirmation/${emailToken}`;
-
-                const info = transporter.sendMail({
+                //SECTION - Email being sent with provided email and content
+                transporter.sendMail({
                 from: process.env.GMAIL_USER,
                 to: userInputs.email,
                 subject: 'Confirm Email',
                 html: `Please click this email to confirm your email: <a href="${url}">${url}</a>`,
-                })
-                .then(() => {
-                    // res.json(userInputs);
-                    console.log('Email sent:', info.messageId);
                 })
                 .catch((err) => {
                     throw err;

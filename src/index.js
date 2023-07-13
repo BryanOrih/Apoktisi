@@ -10,11 +10,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
     <PrimaryContextProvider>
-
-    </PrimaryContextProvider>
       <React.StrictMode>
         <App />
       </React.StrictMode>
+    </PrimaryContextProvider>
   </Router>
 );
 
